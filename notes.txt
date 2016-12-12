@@ -1,0 +1,23 @@
+Notes for tic tac toe
+
+board is always standard. 4 lines make up 3x3 boxes
+
+if one of the boxes is clicked, depending on what turn, draws circle or x
+play until one player wins or all boxes are filled
+
+turn is 1 or -1, always alternating
+
+class for application (keep track of turn, total game score)
+class for logic
+class for each box (filled or unfilled, what key is inside)
+
+game logic:
+turn = -1 or 1
+each turn, multiply by -1
+module for game board / logic, another for GUI
+method for check game over
+
+
+0,0	0,1	0,2
+1,0	1,1	1,2
+2,0	2,1	2,2
