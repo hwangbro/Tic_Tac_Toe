@@ -1,7 +1,7 @@
 import ttt_components
 
 class Board:
-    
+	
     def __init__(self) -> None:
         self._turn = 0
         self._boxes = []
@@ -75,11 +75,26 @@ class Board:
         if count == 9:
             self._finished = True
     
-    def set_turn(self, side: int) -> None:
+    def set_turn(self, side: int) -> None: #1, -1
         self._turn = side
         
     def turn(self) -> int:
         return self._turn
+
+    def winner(self) -> int:
+        return self._winner
+
+    def __str__(self):
+        board = ''
+        for box in row:
+        if box.filled():
+            if box.side() == 1:
+                board += 'X  '
+            elif box.side() == =1:
+                board += 'O  '	
+        else:
+            board += '_  '
+        board += '\n'
 
 
 def print_board(board: Board):
@@ -92,4 +107,9 @@ def print_board(board: Board):
                     print("O  ", end="")
             else:
                 print("_  ", end="")
-        print()   
+        print()
+
+
+if __name__ == '__main__':
+	a = Board()
+	print(a)
